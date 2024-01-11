@@ -18,7 +18,8 @@ async function getNews() {
 
 async function getData(){
     try {
-        const url = 'http://localhost:3000'
+        // const url = 'http://localhost:3000'
+        const url = 'http://34.128.114.78/'
         const res = await fetch(`${url}/api/news`, { cache: 'no-cache' })
         const result = await res.json()
     
