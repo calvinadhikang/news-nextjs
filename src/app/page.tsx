@@ -35,7 +35,8 @@ export default async function Home() {
                     </div>
                 </div>
                 <div className="w-2/6">
-                    <a className='font-medium' href="/add">Add News</a>
+                    <h1 className="font-medium mb-4">Click to add news</h1>
+                    <a className='bg-blue-300 px-4 py-2 rounded' href="/add">Add News</a>
                 </div>
             </div>
             <footer className='border-t border-slate-500 h-20 mt-5 flex items-center justify-center'>
