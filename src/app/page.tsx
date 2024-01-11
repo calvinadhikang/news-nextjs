@@ -31,7 +31,7 @@ export default async function Home() {
                 <div className="w-4/6 pe-10">
                     <p className='font-medium'>Latest News</p>
                     <div className="overflow-auto">
-                    { data.map((news: NewsInterface) => <NewsItem title={news.title} detail={news.detail} author={news.author} image={news.image} ></NewsItem>) }
+                    { data.map((news: NewsInterface) => <NewsItem key={news.title} title={news.title} detail={news.detail} author={news.author} image={news.image} ></NewsItem>) }
                     </div>
                 </div>
                 <div className="w-2/6">
