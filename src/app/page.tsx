@@ -39,7 +39,7 @@ export default async function Home() {
             <div className="grow flex p-10">
                 <div className="w-2/6">
                     <h1 className="text-3xl font-bold">News App</h1>
-                    <p className="text-sm text-slate-600">Brought to you by <span className="italic">Kelompok 5</span></p>
+                    <p className="text-sm text-slate-600">Tau apa aja lewat sini !</p>
                 </div>
                 <div className="w-4/6 pe-10">
                     <p className='font-medium'>Latest News</p>
