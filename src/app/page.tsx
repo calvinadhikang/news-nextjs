@@ -5,6 +5,7 @@ import { Erica_One } from "next/font/google";
 
 async function getNews() {
     try {
+        const url = 'http://34.128.114.78'
         const res = await fetch('http://localhost:30/news', { cache: 'no-cache' })
         const result = res.json()
         
@@ -19,7 +20,7 @@ async function getNews() {
 async function getData(){
     try {
         // const url = 'http://localhost:3000'
-        const url = 'http://34.128.114.78/'
+        const url = 'http://34.128.114.78'
         const res = await fetch(`${url}/api/news`, { cache: 'no-cache' })
         const result = await res.json()
     
