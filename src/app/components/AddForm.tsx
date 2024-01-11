@@ -1,4 +1,5 @@
 "use client"
+import { Erica_One } from "next/font/google"
 import { useState } from "react"
 
 export default function AddForm() {
@@ -7,18 +8,22 @@ export default function AddForm() {
     const [author, setAuthor] = useState("")
 
     const handleSubmit = async () => {
-        console.log('submit')
-        const data = {
-            title: title,
-            detail: detail,
-            author: author,
+        try {
+            console.log('submit')
+            const data = {
+                title: title,
+                detail: detail,
+                author: author,
+            }
+    
+            const url = 'http://localhost:3000'
+            const res = await fetch(`${url}/api/news`, {
+                method: 'POST',
+                body: JSON.stringify(data)
+            })
+        } catch (error) {
+            console.log(error)
         }
-
-        const url = 'http://localhost:3000'
-        const res = await fetch(`${url}/api/news`, {
-            method: 'POST',
-            body: JSON.stringify(data)
-        })
     }
 
     return(

@@ -1,21 +1,32 @@
 import NewsItem from "./components/NewsItem"
 import mysql from 'mysql2/promise';
 import AddForm from "./components/AddForm";
+import { Erica_One } from "next/font/google";
 
 async function getNews() {
-    const res = await fetch('http://localhost:30/news', { cache: 'no-cache' })
-    const result = res.json()
-    
-    console.log(result)
-    return result
+    try {
+        const res = await fetch('http://localhost:30/news', { cache: 'no-cache' })
+        const result = res.json()
+        
+        console.log(result)
+        return result
+    } catch (error) {
+        console.log(error)
+        return []
+    }
 }
 
 async function getData(){
-    const url = 'http://localhost:3000'
-    const res = await fetch(`${url}/api/news`, { cache: 'no-cache' })
-    const result = await res.json()
-
-    return result.rows
+    try {
+        const url = 'http://localhost:3000'
+        const res = await fetch(`${url}/api/news`, { cache: 'no-cache' })
+        const result = await res.json()
+    
+        return result.rows
+    } catch (error) {
+        console.log(error)
+        return []
+    }
 }
 
 export default async function Home() {
