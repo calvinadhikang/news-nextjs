@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pm2-start": "pm2 start npm --name 'news-nextjs' -- run start",
+    "pm2-stop": "pm2 stop news-nextjs"
   },
   "dependencies": {
     "mysql2": "^3.7.0",
