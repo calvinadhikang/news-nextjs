@@ -53,7 +53,7 @@ export default async function Home() {
                 </div>
             </div>
             <footer className='border-t border-slate-500 h-20 mt-5 flex items-center justify-center'>
-                <p className='text-sm text-gray-400 hover:text-inherit'>About Developer</p>
+                <a href="https://kelompok5-istts.et.r.appspot.com/" className='text-sm text-gray-400 hover:text-inherit'>About Developer</a>
             </footer>
         </div>
     )
