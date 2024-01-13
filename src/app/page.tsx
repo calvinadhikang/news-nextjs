@@ -5,7 +5,7 @@ import { Erica_One } from "next/font/google";
 
 async function getNews() {
     try {
-        const url = 'http://34.128.114.78'
+        const url = 'http://34.101.195.149'
         const res = await fetch('http://localhost:30/news', { cache: 'no-cache' })
         const result = res.json()
         
@@ -20,7 +20,7 @@ async function getNews() {
 async function getData(){
     try {
         // const url = 'http://localhost:3000'
-        const url = 'http://34.128.114.78'
+        const url = 'http://34.101.195.149'
         const res = await fetch(`${url}/api/news`, { cache: 'no-cache' })
         const result = await res.json()
     
@@ -53,7 +53,7 @@ export default async function Home() {
                 </div>
             </div>
             <footer className='border-t border-slate-500 h-20 mt-5 flex items-center justify-center'>
-                <a href="https://kelompok5-istts.et.r.appspot.com/" className='text-sm text-gray-400 hover:text-inherit'>About Developer</a>
+                <a href="https://cloudcomp-project.et.r.appspot.com/" className='text-sm text-gray-400 hover:text-inherit'>About Developer</a>
             </footer>
         </div>
     )
