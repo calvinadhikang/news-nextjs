@@ -17,7 +17,7 @@ export default function AddForm() {
             }
     
             // const url = 'http://localhost:3000'
-            const url = 'http://34.101.195.149'
+            const url = 'http://34.101.58.38'
             const res = await fetch(`${url}/api/news`, {
                 method: 'POST',
                 body: JSON.stringify(data)
